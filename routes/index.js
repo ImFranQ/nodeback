@@ -1,9 +1,5 @@
-import { Router } from 'express'
+import router from '../vendor/router'
 
-const route = Router();
+router.get('/', 'HomeController:index')
 
-route.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-export default route;
+export default router.route;
